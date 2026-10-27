@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Umbral">
+  <rect width="64" height="64" rx="14" fill="#0e1113" />
+  <path d="M17 47V24a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v23h-6V26H23v21z" fill="#f5f1e8" />
+  <circle cx="32" cy="39" r="4" fill="#c2603a" />
+</svg>

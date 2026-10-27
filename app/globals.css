@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e1113;
+  --color-ink-2: #161a1d;
+  --color-ink-3: #1f2529;
+  --color-bone: #f5f1e8;
+  --color-bone-2: #ece6d8;
+  --color-ember: #c2603a;
+  --color-ember-2: #dd8258;
+  --color-ember-deep: #a34e2b;
+  --color-ash: #6f777c;
+  --color-ash-2: #9aa1a4;
+  --color-hairline: rgb(14 17 19 / 0.12);
+  --color-hairline-invert: rgb(245 241 232 / 0.16);
+
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink font-sans text-bone antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-ember);
+    color: var(--color-bone);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ember-2);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .display {
+    @apply font-display font-normal tracking-[-0.02em];
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.22em];
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .rule-top {
+    @apply border-t border-hairline;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility animate-fade {
+  animation: fade 1.2s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-fade {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
