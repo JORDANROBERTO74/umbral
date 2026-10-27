@@ -1,0 +1,25 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next/
+out/
+build/
+
+# Environment
+.env*.local
+
+# Tooling
+*.tsbuildinfo
+next-env.d.ts
+
+# System
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
