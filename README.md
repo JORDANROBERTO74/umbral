@@ -77,7 +77,7 @@ Design tokens live in `app/globals.css`: `ink`, `bone`, `ember`, `ash` and the t
 
 Built and deployed on Vercel with Node.js 24.x. `NEXT_PUBLIC_SITE_URL` sets the canonical origin used by metadata, `sitemap.xml`, `robots.txt` and the Open Graph card; it falls back to the production URL in `config/site.ts`.
 
-Live demo: <https://umbral.vercel.app>
+Live demo: <https://umbral-eta-sand.vercel.app>
 
 ## Status and scope
 
